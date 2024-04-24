@@ -9,7 +9,6 @@ class Solution {
                 answer[count] = -1;
             }
             map.put(count,ch);
-            
             count++;
         }
         for(int i = 0; i < map.size(); i++){
@@ -20,7 +19,6 @@ class Solution {
                 }
             }
         }
-        System.out.print(map.size());
         return answer;
     }
 }
