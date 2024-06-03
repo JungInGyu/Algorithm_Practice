@@ -7,15 +7,14 @@ class Solution {
         int num2 = numer2;
         int count = 2;
         int countDe = 2;
-        if(den != den2){
+        if(den != numer1){
             while(den != den2){
-                if(den < den2){
-                    den = denom1;
-                    num1 = numer1;
-                    den *= count;
-                    num1 *= count;
-                    count++;
-                } else if(den > den2){
+                den = denom1;
+                num1 = numer1;
+                den *= count;
+                num1 *= count;
+                count++;
+                if(den > den2){
                     den2 = denom2;
                     den2*=countDe;
                     num2 = numer2;
@@ -24,7 +23,6 @@ class Solution {
                 }
             }
         }
-        System.out.print(num1 + "\t" + num2 );
         int gcd = gcd((num1+num2),den);
         answer[0] = (num1 + num2) / gcd;
         answer[1] = den/gcd;
